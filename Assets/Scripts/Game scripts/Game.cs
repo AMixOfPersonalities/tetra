@@ -12,7 +12,6 @@ public class Game : MonoBehaviour
     void Start()
     {
         SpawnNewTetramino ();
-        DeleteMinoRow ();
     }
 
     public bool IsRowFull (int y)
@@ -62,6 +61,7 @@ public class Game : MonoBehaviour
     {
         for (int i = 0; i < gridHeight; ++i)
         {
+            Debug.Log("1");
             if (IsRowFull(i))
             {
                 DeleteLine(i);
