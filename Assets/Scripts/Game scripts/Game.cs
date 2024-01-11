@@ -64,11 +64,13 @@ public class Game : MonoBehaviour
             Debug.Log("1");
             if (IsRowFull(i))
             {
+                Debug.Log("2");
                 DeleteLine(i);
                 MoveAllMinoRowsDown(i+1);
                 --i;
             }
-            
+            Debug.Log("3");
+
         }
     }
 
