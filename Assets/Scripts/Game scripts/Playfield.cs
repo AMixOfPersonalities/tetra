@@ -10,7 +10,7 @@ public class Playfield : MonoBehaviour
 
     public static Vector2 roundVec2(Vector2 v)
     {
-        return new Vector2 (Mathf.Round(v.x), 
+        return new Vector2(Mathf.Round(v.x),
             Mathf.Round(v.y));
     }
 
@@ -28,13 +28,13 @@ public class Playfield : MonoBehaviour
         }
     }
 
-    public static void decreaseRow(int y) 
+    public static void decreaseRow(int y)
     {
-        for(int x = 0;x < width; x++)
+        for (int x = 0; x < width; x++)
         {
-            if (grid[x, y] != null )
+            if (grid[x, y] != null)
             {
-                grid[x, y-1] = grid[x, y]; 
+                grid[x, y - 1] = grid[x, y];
                 grid[x, y] = null;
                 grid[x, y - 1].position += new Vector3(0, -1, 0);
             }
@@ -43,14 +43,14 @@ public class Playfield : MonoBehaviour
 
     public static void decreaseRowsAbove(int y)
     {
-        for( int i = y; i < height; i++)
+        for (int i = y; i < height; i++)
             decreaseRow(i);
     }
 
     public static bool isRowFull(int y)
     {
         for (int x = 0; x < width; x++)
-            if (grid[x, y] == null )
+            if (grid[x, y] == null)
                 return false;
         return true;
     }
@@ -59,7 +59,7 @@ public class Playfield : MonoBehaviour
     {
         for (int y = 0; y < height; y++)
         {
-            if(isRowFull(y))
+            if (isRowFull(y))
             {
                 deleteRow(y);
                 decreaseRowsAbove(y + 1);

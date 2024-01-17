@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8831744001995764305}
-  - component: {fileID: -3691830731569091250}
+  - component: {fileID: -6532528167599329412}
   m_Layer: 0
   m_Name: O Tetramino
   m_TagString: Untagged
@@ -288,19 +288,18 @@ Transform:
   - {fileID: 4355748828953485262}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-3691830731569091250
+--- !u!114 &-6532528167599329412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616819642605956426}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 305bb2c02e7886245bb0b2d84fed21b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e000c1c40c228f42a514bf35efcdba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 1
 --- !u!1 &3028266656468556971
 GameObject:
   m_ObjectHideFlags: 0
