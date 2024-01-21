@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene4 - Game Menu.unity
     guid: 6017069d62a2373458f71c515abc731b
   - enabled: 1
-    path: Assets/Scenes/Scene6 - Singleplayer.unity
+    path: Assets/Depreceated/Scene6 - Singleplayer.unity
     guid: 28206669704ed41469729815769bfcc8
   - enabled: 1
     path: Assets/Scenes/Scene7 - Tetris Singleplayer.unity
