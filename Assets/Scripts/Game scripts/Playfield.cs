@@ -65,6 +65,7 @@ public class Playfield : MonoBehaviour
                 decreaseRowsAbove(y + 1);
                 y--;
                 Manager.score += 100;
+                Manager.linesCleared++;
             }
         }
     }

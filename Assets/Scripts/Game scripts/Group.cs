@@ -5,6 +5,10 @@ using UnityEngine;
 public class Group : MonoBehaviour
 {
     float lastFall = 0;
+    private GameObject heldTetromino;
+    private bool canHold = true;
+    float fallSpeed = 2.0f;
+
     bool isValidGridPos()
     {
         foreach (Transform child in transform)
@@ -83,7 +87,7 @@ public class Group : MonoBehaviour
 
         // Move Downwards and Fall
         else if (Input.GetKeyDown(KeyCode.DownArrow) ||
-                 Time.time - lastFall >= 1)
+                 Time.time - lastFall >= fallSpeed)
         {
             // Modify position
             transform.position += new Vector3(0, -1, 0);
@@ -110,6 +114,61 @@ public class Group : MonoBehaviour
             }
 
             lastFall = Time.time;
+            Debug.Log(fallSpeed);
+
+        }
+
+        else if (Input.GetKey(KeyCode.RightShift) ||
+                 Time.time - lastFall >= fallSpeed)
+        {
+            // Modify position
+            transform.position += new Vector3(0, -1, 0);
+
+            // See if valid
+            if (isValidGridPos())
+            {
+                // It's valid. Update grid.
+                updateGrid();
+            }
+            else
+            {
+                // It's not valid. revert.
+                transform.position += new Vector3(0, 1, 0);
+
+                // Clear filled horizontal lines
+                Playfield.deleteFullRows();
+
+                // Spawn next Group
+                FindObjectOfType<Spawner>().spawnNext();
+
+                // Disable script
+                enabled = false;
+            }
+
+            lastFall = Time.time;
+            Debug.Log(fallSpeed);
+
+        }
+
+        else if (Input.GetKeyDown(KeyCode.C))  // You can use any key you prefer
+        {
+            if (canHold)
+            {
+                if (heldTetromino == null)
+                {
+                    heldTetromino = FindObjectOfType<Spawner>().getHoldTetromino();
+                    FindObjectOfType<Spawner>().spawnNext();
+                    canHold= true;
+                }
+                else
+                {
+                    FindObjectOfType<Spawner>().swapHoldTetromino(heldTetromino, transform.position);
+                    heldTetromino = FindObjectOfType<Spawner>().getHoldTetromino();
+                }
+
+                canHold = false;
+                enabled = false; // Disable movement until the next piece spawns
+            }
         }
     }
 
