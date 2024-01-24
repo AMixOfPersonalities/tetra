@@ -5,7 +5,6 @@ using UnityEngine;
 public class Group : MonoBehaviour
 {
     float lastFall = 0;
-    private GameObject heldTetromino;
     private bool canHold = true;
     float fallSpeed = 2.0f;
 
@@ -114,15 +113,14 @@ public class Group : MonoBehaviour
             }
 
             lastFall = Time.time;
-            Debug.Log(fallSpeed);
 
         }
 
-        else if (Input.GetKey(KeyCode.RightShift) ||
+        else if (Input.GetKey(KeyCode.RightShift) && Input.GetKey(KeyCode.DownArrow) ||
                  Time.time - lastFall >= fallSpeed)
         {
             // Modify position
-            transform.position += new Vector3(0, -1, 0);
+            transform.position += new Vector3(0, -0.5f, 0);
 
             // See if valid
             if (isValidGridPos())
@@ -146,32 +144,15 @@ public class Group : MonoBehaviour
             }
 
             lastFall = Time.time;
-            Debug.Log(fallSpeed);
 
         }
 
-        else if (Input.GetKeyDown(KeyCode.C))  // You can use any key you prefer
-        {
-            if (canHold)
-            {
-                if (heldTetromino == null)
-                {
-                    heldTetromino = FindObjectOfType<Spawner>().getHoldTetromino();
-                    FindObjectOfType<Spawner>().spawnNext();
-                    canHold= true;
-                }
-                else
-                {
-                    FindObjectOfType<Spawner>().swapHoldTetromino(heldTetromino, transform.position);
-                    heldTetromino = FindObjectOfType<Spawner>().getHoldTetromino();
-                }
-
-                canHold = false;
-                enabled = false; // Disable movement until the next piece spawns
-            }
-        }
+        
     }
-
+    public void ResetHold()
+    {
+        canHold = true;
+    }
     void Start()
     {
         // Default position not valid? Then it's game over
