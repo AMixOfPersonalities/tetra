@@ -687,6 +687,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791027034}
   m_CullTransparentMesh: 1
+--- !u!1 &1810463200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1810463202}
+  - component: {fileID: 1810463201}
+  m_Layer: 0
+  m_Name: Multiplayer Button Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1810463201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810463200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da3a24bed6857f45965cfcd2f8dce2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1810463202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810463200}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.293854, y: 68.08875, z: -0.32993975}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1980898444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1128,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Multiplayer Button
       objectReference: {fileID: 0}
+    - target: {fileID: 1317919495884512308, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317919495884512308, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317919495884512308, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1810463201}
+    - target: {fileID: 1317919495884512308, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317919495884512308, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MultiplayerButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317919495884512308, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MultiplayerButtonUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317919495884512308, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1812681349407049243, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
@@ -1243,3 +1315,4 @@ SceneRoots:
   - {fileID: 1980898447}
   - {fileID: 242339581}
   - {fileID: 184566517}
+  - {fileID: 1810463202}

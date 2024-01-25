@@ -7,7 +7,6 @@ public class Playfield : MonoBehaviour
     public static int width = 10;
     public static int height = 20;
     public static Transform[,] grid = new Transform[width, height]; //sets grid to type Transform from type GameObject 
-
     public static Vector2 roundVec2(Vector2 v)
     {
         return new Vector2(Mathf.Round(v.x),

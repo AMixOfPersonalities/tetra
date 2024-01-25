@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SPButton : MonoBehaviour
+public class MultiplayerButtonUI : MonoBehaviour
 {
-    public void SinglePlayerButton()
+   public void MultiplayerButton()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(6);
     }
-    
 }

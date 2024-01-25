@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Group : MonoBehaviour
@@ -120,7 +121,7 @@ public class Group : MonoBehaviour
                  Time.time - lastFall >= fallSpeed)
         {
             // Modify position
-            transform.position += new Vector3(0, -0.5f, 0);
+            transform.position += new Vector3(0, -1, 0);
 
             // See if valid
             if (isValidGridPos())
@@ -160,6 +161,7 @@ public class Group : MonoBehaviour
         {
             Debug.Log("GAME OVER");
             Destroy(gameObject);
+            SceneManager.LoadScene(5);
         }
     }
 }

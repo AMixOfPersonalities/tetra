@@ -1,15 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class Scoredisplay : MonoBehaviour
+public class ScoreDisplay : MonoBehaviour
 {
     public TMP_Text scoreText;
 
-    void Update()
-    {
-        scoreText.text = "" + Manager.score;
-    }
+    void Update() { scoreText.text = "" + Manager.score; }
 }
