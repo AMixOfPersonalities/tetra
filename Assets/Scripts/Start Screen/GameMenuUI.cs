@@ -7,12 +7,12 @@ public class GameMenuUI : MonoBehaviour
 {
     public void SinglePlayerButton()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("Scene11 - SinglePlayer");
     }
 
     public void MultiplayerButton()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene("Scene9 - Multiplayer Lobby");
     }
 
     public void EducationModeButton ()

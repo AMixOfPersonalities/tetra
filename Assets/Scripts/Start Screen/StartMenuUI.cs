@@ -8,11 +8,11 @@ public class StartMenuUI : MonoBehaviour
 
     public void LoginButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Scene2 - Login Screen");
     }
     public void RegisterButton()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Scene3 - Register Scene");
     }
     public void QuitGame()
     {

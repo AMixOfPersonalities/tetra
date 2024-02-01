@@ -7,7 +7,7 @@ public class LoadGameMenu : MonoBehaviour
 {
     public void LoadInGM()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Scene4 - Game Menu");
     }
 
 }

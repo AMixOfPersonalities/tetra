@@ -51,7 +51,7 @@ public class Board : MonoBehaviour
     public void GameOver()
     {
         tilemap.ClearAllTiles();
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("Scene8 - Game Over");
     }
 
     public void Set(Piece piece)

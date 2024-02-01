@@ -23,6 +23,10 @@ public class Piece : MonoBehaviour
     public KeyCode rotateCounterClockwise = KeyCode.UpArrow;
     public KeyCode hardDrop = KeyCode.Space;
 
+    private int score;
+    private int level = 1;
+    private int linesCleared;
+    private int comboCount;
 
     public void Initialize(Board board, Vector3Int position, TetrominoData data)
     {

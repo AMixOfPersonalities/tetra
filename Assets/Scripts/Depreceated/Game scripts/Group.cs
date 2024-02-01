@@ -118,7 +118,7 @@ public class Group : MonoBehaviour
         if (!isValidGridPos())
         {
             Destroy(gameObject);
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene("Scene8 - Game Over");
         }
     }
 }
