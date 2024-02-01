@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 1017553606}
   - component: {fileID: 1017553605}
   m_Layer: 5
-  m_Name: Register Button (1)
+  m_Name: Local
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,6 +317,10 @@ PrefabInstance:
       propertyPath: m_text
       value: JOIN LOBBY
       objectReference: {fileID: 0}
+    - target: {fileID: 1111837466394627719, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
+      propertyPath: m_Name
+      value: Join
+      objectReference: {fileID: 0}
     - target: {fileID: 3331579212467055782, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
       propertyPath: m_text
       value: MULTIPLAYER
@@ -356,6 +360,14 @@ PrefabInstance:
     - target: {fileID: 7928450787664291424, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
       propertyPath: m_Name
       value: Multiplayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445736289453787462, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
+      propertyPath: m_Name
+      value: back button
+      objectReference: {fileID: 0}
+    - target: {fileID: 8652480619937465215, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
+      propertyPath: m_Name
+      value: host
       objectReference: {fileID: 0}
     - target: {fileID: 8965433837036722813, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
       propertyPath: m_Pivot.x
