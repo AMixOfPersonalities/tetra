@@ -45,7 +45,8 @@ public class PauseMenuUI : MonoBehaviour
 
     public void GoToGameMenu()
     {
-        SceneManager.LoadScene("Scene3 - Register Scene");
+        SceneManager.LoadScene("Scene4 - Game Menu");
+        Time.timeScale = 1f;
     }
 
     public void QuitGame()
