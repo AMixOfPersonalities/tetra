@@ -236,7 +236,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.5330188, g: 0.87913436, b: 1, a: 1}
     m_PressedColor: {r: 0, g: 0.52920043, b: 0.7169812, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -250,7 +250,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 199648060}
   m_OnClick:
     m_PersistentCalls:
@@ -913,63 +913,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118649602}
   m_CullTransparentMesh: 1
---- !u!1001 &1141797718769236854
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3019699224730413171, guid: 9ef636d8d4f5c874592e7d3d63b093a4, type: 3}
-      propertyPath: m_Name
-      value: Square
-      objectReference: {fileID: 0}
-    - target: {fileID: 8980528035723074033, guid: 9ef636d8d4f5c874592e7d3d63b093a4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8980528035723074033, guid: 9ef636d8d4f5c874592e7d3d63b093a4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8980528035723074033, guid: 9ef636d8d4f5c874592e7d3d63b093a4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8980528035723074033, guid: 9ef636d8d4f5c874592e7d3d63b093a4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8980528035723074033, guid: 9ef636d8d4f5c874592e7d3d63b093a4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8980528035723074033, guid: 9ef636d8d4f5c874592e7d3d63b093a4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8980528035723074033, guid: 9ef636d8d4f5c874592e7d3d63b093a4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8980528035723074033, guid: 9ef636d8d4f5c874592e7d3d63b093a4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8980528035723074033, guid: 9ef636d8d4f5c874592e7d3d63b093a4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8980528035723074033, guid: 9ef636d8d4f5c874592e7d3d63b093a4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9ef636d8d4f5c874592e7d3d63b093a4, type: 3}
 --- !u!1001 &3063384893710370439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -978,6 +921,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 239674334299222172, guid: b9aad9a8741edba4bac668dfc9dce507, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.86666673
+      objectReference: {fileID: 0}
+    - target: {fileID: 239674334299222172, guid: b9aad9a8741edba4bac668dfc9dce507, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.7960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 239674334299222172, guid: b9aad9a8741edba4bac668dfc9dce507, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.59607846
+      objectReference: {fileID: 0}
     - target: {fileID: 5139503212241362844, guid: b9aad9a8741edba4bac668dfc9dce507, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -1337,7 +1292,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 3063384893710370439}
-  - {fileID: 1141797718769236854}
   - {fileID: 4580608206189430797}
   - {fileID: 6111323467768491010}
   - {fileID: 1980898447}

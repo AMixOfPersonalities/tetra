@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+
 using UnityEngine.SceneManagement;
 
 public class Board : MonoBehaviour
@@ -7,11 +8,22 @@ public class Board : MonoBehaviour
     public Tilemap tilemap { get; private set; }
     public Piece activePiece { get; private set; }
 
+    public ScoreManager scoreManager;
+
+    private int score = 0;
+    private int comboCount = 0;
+
     public TetrominoData[] tetrominoes;
     public Vector2Int boardSize = new Vector2Int(10, 20);
     public Vector3Int spawnPosition = new Vector3Int(-1, 8, 0);
 
-    public RectInt Bounds {
+    public int Level
+    {
+        get { return Mathf.FloorToInt(score / 1000) + 1; }
+    }
+
+    public RectInt Bounds 
+    {
         get
         {
             Vector2Int position = new Vector2Int(-boardSize.x / 2, -boardSize.y / 2);
@@ -51,7 +63,19 @@ public class Board : MonoBehaviour
     public void GameOver()
     {
         tilemap.ClearAllTiles();
-        SceneManager.LoadScene("Scene8 - Game Over");
+        Scene GameType = SceneManager.GetActiveScene();
+        Debug.Log(GameType);
+        if (GameType.name == "Scene11 - SinglePlayer")
+        {
+            PlayerPrefs.SetInt("LastScore", score);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene("Scene8 - Game Over");
+        }
+        else if (GameType.name == "Scene10 - Local Multiplayer Screen")
+        {
+            FindObjectOfType<SavePlayerScores>().Save();
+            SceneManager.LoadScene("Scene5 - Local Multiplayer Game Over");
+        }
     }
 
     public void Set(Piece piece)
@@ -99,6 +123,7 @@ public class Board : MonoBehaviour
     {
         RectInt bounds = Bounds;
         int row = bounds.yMin;
+        int clearedLines = 0;
 
         // Clear from bottom to top
         while (row < bounds.yMax)
@@ -107,10 +132,57 @@ public class Board : MonoBehaviour
             // because the tiles above will fall down when a row is cleared
             if (IsLineFull(row)) {
                 LineClear(row);
+                clearedLines++;
             } else {
                 row++;
             }
         }
+        CalculateScore(clearedLines);
+    }
+
+    private void CalculateScore(int clearedLines)
+    {
+        if (clearedLines == 0) return;
+
+        bool isTetris = clearedLines == 4;
+        bool isBackToBack = clearedLines >= 1 && clearedLines <= 4;
+        int BaseScore = 0;
+
+        switch (clearedLines)
+        {
+            case 1:
+                BaseScore = 100;
+                break;
+            case 2:
+                BaseScore = 300;
+                break;
+            case 3:
+                BaseScore = 500;
+                break;
+            case 4 : 
+                BaseScore = 800;
+                break;
+        }
+
+        int lineClearScore = BaseScore * Level;
+
+        if (isBackToBack)
+        {
+            lineClearScore = Mathf.FloorToInt(lineClearScore * 1.5f);
+        }
+
+        if(comboCount > 0)
+        {
+            int comboBonus = 50 * comboCount * Level;
+            lineClearScore += comboBonus;
+        }
+
+        score += lineClearScore;
+
+        comboCount = clearedLines > 0 ? comboCount + 1 : 0;
+
+        // Update the score using ScoreManager
+            scoreManager.UpdateScore(score);
     }
 
     public bool IsLineFull(int row)

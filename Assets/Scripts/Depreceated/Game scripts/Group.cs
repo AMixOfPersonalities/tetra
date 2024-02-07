@@ -6,7 +6,6 @@ using UnityEngine;
 public class Group : MonoBehaviour
 {
     float lastFall = 0;
-    private bool canHold = true;
     float fallSpeed = 1.0f;
 
     void Move(Vector3 direction)
@@ -107,11 +106,6 @@ public class Group : MonoBehaviour
         }
     }
 
-
-    public void ResetHold()
-    {
-        canHold = true;
-    }
 
     void Start()
     {
