@@ -64,7 +64,6 @@ public class Board : MonoBehaviour
     {
         tilemap.ClearAllTiles();
         Scene GameType = SceneManager.GetActiveScene();
-        Debug.Log(GameType);
         if (GameType.name == "Scene11 - SinglePlayer")
         {
             PlayerPrefs.SetInt("LastScore", score);
