@@ -200,13 +200,13 @@ public class Piece : MonoBehaviour
                     // "I" and "O" are rotated from an offset center point
                     cell.x -= 0.5f;
                     cell.y -= 0.5f;
-                    x = Mathf.CeilToInt((cell.x * matrix[0] * direction) + (cell.y * matrix[1] * direction));
-                    y = Mathf.CeilToInt((cell.x * matrix[2] * direction) + (cell.y * matrix[3] * direction));
+                    x = Maths.CeilToInt((float)(cell.x * matrix[0] * direction) + (float)(cell.y * matrix[1] * direction));
+                    y = Maths.CeilToInt((float)(cell.x * matrix[2] * direction) + (float)(cell.y * matrix[3] * direction));
                     break;
 
                 default:
-                    x = Mathf.RoundToInt((cell.x * matrix[0] * direction) + (cell.y * matrix[1] * direction));
-                    y = Mathf.RoundToInt((cell.x * matrix[2] * direction) + (cell.y * matrix[3] * direction));
+                    x = Maths.RoundToInt((float)(cell.x * matrix[0] * direction) + (float)(cell.y * matrix[1] * direction));
+                    y = Maths.RoundToInt((float)(cell.x * matrix[2] * direction) + (float)(cell.y * matrix[3] * direction));
                     break;
             }
 

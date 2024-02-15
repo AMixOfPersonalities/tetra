@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
-
 using UnityEngine.SceneManagement;
 
 public class Board : MonoBehaviour
@@ -19,7 +18,7 @@ public class Board : MonoBehaviour
 
     public int Level
     {
-        get { return Mathf.FloorToInt(score / 1000) + 1; }
+        get { return Maths.FloorToInt(score / 1000) + 1; }
     }
 
     public RectInt Bounds 
@@ -167,7 +166,7 @@ public class Board : MonoBehaviour
 
         if (isBackToBack)
         {
-            lineClearScore = Mathf.FloorToInt(lineClearScore * 1.5f);
+            lineClearScore = Maths.FloorToInt(lineClearScore * 1.5f);
         }
 
         if(comboCount > 0)

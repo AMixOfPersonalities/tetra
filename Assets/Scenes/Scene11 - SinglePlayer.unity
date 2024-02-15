@@ -1660,6 +1660,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2502910807969556207, guid: 5b0dfce785a81af45959e59b0834bc35, type: 3}
+      propertyPath: rotateCounterClockwise
+      value: 280
+      objectReference: {fileID: 0}
     - target: {fileID: 3355902898008602008, guid: 5b0dfce785a81af45959e59b0834bc35, type: 3}
       propertyPath: scoreManager
       value: 
