@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
 
     public void UpdateScore(int newScore)
     {
-        score = newScore;
+        score = score + newScore;
         UpdateScoreUI();
     }
 

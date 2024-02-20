@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Piece : MonoBehaviour
 {
@@ -23,11 +24,7 @@ public class Piece : MonoBehaviour
     public KeyCode rotateCounterClockwise = KeyCode.UpArrow;
     public KeyCode hardDrop = KeyCode.Space;
 
-    private int score;
-    private int level = 1;
-    private int linesCleared;
-    private int comboCount;
-
+    public ScoreManager scoremanager;
     public void Initialize(Board board, Vector3Int position, TetrominoData data)
     {
         this.data = data;
@@ -72,7 +69,7 @@ public class Piece : MonoBehaviour
         if (Input.GetKeyDown(hardDrop))
         {
             HardDrop();
-            Debug.Log("hard Down Key: " + hardDrop);
+
         }
 
         // Allow the player to hold movement keys but only after a move delay
@@ -101,6 +98,7 @@ public class Piece : MonoBehaviour
                 // Update the step time to prevent double movement
                 stepTime = Time.time + stepDelay;
             }
+            scoremanager.UpdateScore(1);
         }
 
         // Left/right movement
@@ -134,7 +132,7 @@ public class Piece : MonoBehaviour
         {
             continue;
         }
-
+        scoremanager.UpdateScore(2);
         Lock();
     }
 
