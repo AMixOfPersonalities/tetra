@@ -17,7 +17,7 @@ public class GameMenuUI : MonoBehaviour
 
     public void EducationModeButton ()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Scene12 - Education Screen");
     }
     public void vsComputerButton()
     {
