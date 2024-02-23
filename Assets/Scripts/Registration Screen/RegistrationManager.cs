@@ -43,7 +43,7 @@ public class RegistrationManager : MonoBehaviour
 
     private void KeepTagline(bool Valid)
     {
-        validationText.text = "Learn how to play Tetris!";
+        validationText.text = "Looking Good!";
         validationText.color = Color.black;
     }
 
@@ -85,16 +85,15 @@ public class RegistrationManager : MonoBehaviour
 
     private void ValidateUsername (string input)
     {
-        string pattern = @"^[a-z0-9_\-()]{3,15}$";
-        ValidateInput(UserValid,input, pattern, "Username must only contain 3-15 characters: Aa-Zz, 0-9, )");
+        string pattern = @"^[a-z0-9_\-()]{3,20}$";
+        ValidateInput(UserValid,input, pattern, "Username must only contain 3-20 alphanumeric characters or '_-()'");
     }
 
-    private void ValidatePassword (string input)
+    private void ValidatePassword(string input)
     {
-        string pattern = @"^[a-z0-9_\-()]{3,15}$";
-        ValidateInput(PassValid, input, pattern, "");
+        string pattern = @"^[a-zA-Z0-9_\-()!@#$%^&*]{8,20}$"; // Example pattern for a more secure password
+        ValidateInput(PassValid, input, pattern, "Password must be 8-20 characters long and can contain alphanumeric characters or '_-()!@#$%^&*'");
     }
-
     private void ValidateConfirmPass (string input)
     {
         if (passwordField.text != confirmPassField.text)

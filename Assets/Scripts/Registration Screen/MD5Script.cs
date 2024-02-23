@@ -1,27 +1,23 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
-
 public class MD5Script : MonoBehaviour
 {
     public TMP_InputField inputField;
 
-    public void GenerateMD5Hash()
+    public string GenerateMD5Hash()
     {
         string inputText = inputField.text;
 
         if (string.IsNullOrEmpty(inputText))
         {
             Debug.LogError("Input field is empty!");
-            return;
+            return null;
         }
 
         string md5Hash = CalculateMD5Hash(inputText);
-        Debug.Log("MD5 Hash: " + md5Hash);
+        return md5Hash;
     }
 
     private string CalculateMD5Hash(string input)
