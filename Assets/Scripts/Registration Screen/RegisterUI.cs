@@ -1,27 +1,29 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RegisterUI : MonoBehaviour
 {
     // Reference to the MD5Script component
     public MD5Script md5Script;
+    public UserDbTest userDbTest;
+
+    public TMP_InputField userInputField;
+    public TMP_InputField passwordField;
+    public TMP_InputField emailInputField;
+
 
     public void RegisterButton()
     {
-        // Check if the reference is assigned
-        if (md5Script != null)
-        {
-            // Call the GenerateMD5Hash method on the md5Script instance
-            string md5Result = md5Script.GenerateMD5Hash();
+        // Get inputs from user
+        string username = userInputField.text;
+        string password = md5Script.GenerateMD5Hash(); // Hash the password
+        string email = emailInputField.text;
 
-            // Check if the result is not null before logging
-            if (md5Result != null)
-            {
-                Debug.Log("MD5 Hash Result: " + md5Result);
-            }
-        }
-        else
-        {
-            Debug.LogError("MD5Script reference is not assigned!");
-        }
+        // Add entry to user database
+        userDbTest.AddEntryUserDb(username, password, email);
+
+        // Read all entries from the user database
+        userDbTest.ReadUserDb();
     }
 }

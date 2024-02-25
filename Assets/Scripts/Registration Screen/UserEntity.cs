@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DataBank
 {
-    public class LocationEntity
+    public class UserEntity
     {
 
         public string _user;
@@ -13,7 +13,7 @@ namespace DataBank
         public string _email;
         public String _dateCreated;
 
-        public LocationEntity(string user, string hash, string email)
+        public UserEntity(string user, string hash, string email)
         {
             _user = user;
             _hash = hash;
@@ -21,7 +21,7 @@ namespace DataBank
             _dateCreated = "";
         }
 
-        public LocationEntity(string user, string hash, string email, string dateCreated)
+        public UserEntity(string user, string hash, string email, string dateCreated)
         {
             _user = user;
             _hash = hash;
@@ -29,8 +29,9 @@ namespace DataBank
             _dateCreated = dateCreated;
         }
 
-        public static LocationEntity getFakeLocation()
+        public static UserEntity getFakeUser()
         {
-            return new LocationEntity("user", "hash", "email@example.com");
+            return new UserEntity("user", "hash", "email@example.com");
         }
     }
+}

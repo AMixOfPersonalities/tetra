@@ -7,9 +7,9 @@ using UnityEngine;
 
 namespace DataBank
 {
-    public class LocationDb : SqliteHelper
+    public class UserDb : SqliteHelper
     {
-        private const String Tag = "Tetra: LocationDb:\t";
+        private const String Tag = "Tetra: UserDb:\t";
 
         private const String TABLE_NAME = "User";
         private const String KEY_USER = "user";
@@ -18,7 +18,7 @@ namespace DataBank
         private const String KEY_DATE = "date";
         private String[] COLUMNS = new String[] { KEY_USER, KEY_HASH, KEY_EMAIL, KEY_DATE };
 
-        public LocationDb() : base()
+        public UserDb() : base()
         {
             IDbCommand dbcmd = getDbCommand();
             dbcmd.CommandText = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " ( " +
@@ -29,7 +29,7 @@ namespace DataBank
             dbcmd.ExecuteNonQuery();
         }
 
-        public void addData(LocationEntity location)
+        public void addData(UserEntity user)
         {
             IDbCommand dbcmd = getDbCommand();
             dbcmd.CommandText =
@@ -40,9 +40,9 @@ namespace DataBank
                 + KEY_EMAIL + " ) "
 
                 + "VALUES ( '"
-                + location._user + "', '"
-                + location._hash + "', '"
-                + location._email + "' )";
+                + user._user + "', '"
+                + user._hash + "', '"
+                + user._email + "' )";
             dbcmd.ExecuteNonQuery();
         }
 
