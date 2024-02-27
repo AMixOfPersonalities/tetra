@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df0e94d50367bff45b3ba9f6eccb8da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previousScene: Scene16 - Education Full Menu
+  previousScene: Scene17 - Methods
 --- !u!4 &14552862
 Transform:
   m_ObjectHideFlags: 0
@@ -1990,7 +1990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3331579212467055782, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
       propertyPath: m_text
-      value: THE BASICS
+      value: SHAICHIKU
       objectReference: {fileID: 0}
     - target: {fileID: 3331579212467055782, guid: 42e5914e81d7cdf42ac6aea58cfade33, type: 3}
       propertyPath: m_fontSize

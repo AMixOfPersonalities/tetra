@@ -17,10 +17,23 @@ public class GameMenuUI : MonoBehaviour
 
     public void EducationModeButton ()
     {
-        SceneManager.LoadScene("Scene12 - Education Screen");
+        int whichScene = PlayerPrefs.GetInt("Basics");
+        if (whichScene == 1)
+        {
+            SceneManager.LoadScene("Scene12 - Education Screen");
+        }
+        else
+        {
+            SceneManager.LoadScene("Scene16 - Education Full Menu");
+        }
     }
     public void vsComputerButton()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void ExitButton()
+    {
+        Application.Quit();
     }
 }

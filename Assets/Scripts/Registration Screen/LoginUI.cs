@@ -29,7 +29,7 @@ public class LoginUI : MonoBehaviour
                 string hashedPasswordFromDb = reader[1].ToString();
 
                 // Hash the password provided by the user 
-                string hashedPasswordProvidedByUser = mD5Script.GenerateMD5Hash(); 
+                string hashedPasswordProvidedByUser = mD5Script.GenerateMD5Hash();
 
                 // Compare the hashed passwords
                 if (hashedPasswordFromDb.Equals(hashedPasswordProvidedByUser))
@@ -56,5 +56,4 @@ public class LoginUI : MonoBehaviour
     {
         SceneManager.LoadScene("Scene4 - Game Menu");
     }
-
 }
