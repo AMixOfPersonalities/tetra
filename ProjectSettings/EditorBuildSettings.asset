@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene2 - Login Screen.unity
     guid: 962a380b9c838cb499f9187cd807a30f
-  - enabled: 0
-    path: Assets/Scenes/Scene3 - Registration Scene.unity
-    guid: c3b5328fcd3aa874683d0ae11e34a3c2
   - enabled: 1
     path: Assets/Scenes/Scene3 - Register Scene.unity
     guid: 8ab31e37557033944babb859dae9bd9d
@@ -21,10 +18,103 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene4 - Game Menu.unity
     guid: 6017069d62a2373458f71c515abc731b
   - enabled: 1
-    path: Assets/Depreceated/Scene6 - Singleplayer.unity
-    guid: 28206669704ed41469729815769bfcc8
+    path: Assets/Scenes/Scene5 - Local Multiplayer Game Over.unity
+    guid: 5bf219d9a905b6e419795ba4cebde4b0
   - enabled: 1
-    path: Assets/Scenes/Scene7 - Tetris Singleplayer.unity
-    guid: 828092c44a3aab544a1566476f104bbd
+    path: Assets/Scenes/Scene8 - Game Over.unity
+    guid: 89a56f6775838224fa0175913e6c5e90
+  - enabled: 1
+    path: Assets/Scenes/Scene9 - Multiplayer Lobby.unity
+    guid: 7389c3f8d8fa2e34d98751f2b005edc4
+  - enabled: 1
+    path: Assets/Scenes/Scene10 - Local Multiplayer Screen.unity
+    guid: 2c4828c80dd20d64abded118014fec2c
+  - enabled: 1
+    path: Assets/Scenes/Scene11 - SinglePlayer.unity
+    guid: fc0dcbf6a7cf0ad49bd5d1baa712abd8
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Scene12 - Education Screen.unity
+    guid: df3e99d0477a7be429b8c4b54cdf8f39
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Scene13 - The Basics.unity
+    guid: 57ab85cbcaa7811498c515d270043b72
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Openers/Scene15 - Openers.unity
+    guid: cf0dd10d025c0d94f9c23a2b33af8dd6
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Openers/Scene15_1 - TKI.unity
+    guid: ad0e6d9d9aae4504ab92da3785753bb2
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Openers/Scene15_2 - DT.unity
+    guid: 2306205b4a437e54f96c8681d1499ba3
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Openers/Scene15_3 - MKO.unity
+    guid: 0f8b72bea6d6d2a41970fd6b15c541fe
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Openers/Scene15_4 - PCO.unity
+    guid: 60530e8352af0cd4d877f7de78b0d243
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Openers/Scene15_5 - CS.unity
+    guid: f0c4d8bff49282c4aa1df3f1e5d7b3e1
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Openers/Scene15_6 - HACHI.unity
+    guid: 3760c54cdb6e02d4790a2933ddee4a94
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Scene16 - Education Full Menu.unity
+    guid: 07f62f3c475d33a4a8df501462148a10
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17 - Methods.unity
+    guid: a26e4cb9cd75dd14eaf53aa596e46e83
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17_1 - TST.unity
+    guid: d17a4872327d2d1419afc9c4aced74ea
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17_2 - TRIPLE DOUBLE.unity
+    guid: 842df1d016785fe4981f1e8356f16ecc
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17_3 - KAIDAN.unity
+    guid: 63ccbcf7ffa5dc741af861799db1ce08
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17_4 - DT CANNON.unity
+    guid: 179f80e8614bd624bb15f66bb54be4ad
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17_5 - FRACTAL.unity
+    guid: ce936e29cfc4cee4ea4d3530c42b6dfa
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17_6 - SHACHIKU.unity
+    guid: dcdfb0de466fddd419d401e2ff27c1ac
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17_7 - IMPERIAL CROSS.unity
+    guid: 858631bd7e6bdde48b91c1767532be16
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17_8 - PARAPET.unity
+    guid: ba139960edfb1cd4a919228f8045185e
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17_9 - STSD.unity
+    guid: ca486f1042ca4ff4a9bc0b3d9e0e4aea
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17_10 - POLYMER T-SPIN.unity
+    guid: 4b69bb696ce9e4847875f242be6f9763
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17_11 - YOSHIRO.unity
+    guid: cfffad24ee996904a8b1634eeaef64c0
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17_12 - STMB CAVE.unity
+    guid: fbf0171795321b04f982fa09f89c3e09
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Methods/Scene17_13 - ANCHOR SET.unity
+    guid: 3ef371ae7ee1f0a4eb5110e28d36709c
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Mid Game/Scene18 - Mid Game.unity
+    guid: e1d37566eff8343449d856e8ac017e64
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Perfect Clears/Scene19 - Perfect Clears.unity
+    guid: 958d7c384fb4c1e47a48751947e1190b
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/SRS/Scene20 - SRS.unity
+    guid: a8535cc5adc53c944b34608a2d8abd77
+  - enabled: 1
+    path: Assets/Scenes/Education Mode/Stacking/Scene21 - Stacking.unity
+    guid: 1407a342656014d419f60fc5fb0efd4b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 69a8d0d48fd971e45bb7e50d8f655557, type: 2}
